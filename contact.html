@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact & printing quotes — Wisdom Traders</title>
+<meta name="description" content="WhatsApp, phone, email and a printing quote form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231E1B16'/%3E%3Ctext x='16' y='23' font-family='Arial Narrow,Arial' font-weight='700' font-size='18' fill='%23F3EEE4' text-anchor='middle'%3EWT%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="contact">
+<header id="site-header"></header>
+<main id="main">
+
+<div class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+  <h1 style="font-size:clamp(44px,6vw,84px)">Contact</h1>
+  <p class="lede">WhatsApp is quickest. We reply within the hour during working hours.</p>
+</div></div>
+<div class="wrap contact-grid">
+  <div>
+    <dl class="contact-list" id="contact-list"></dl>
+  </div>
+  <form class="form" id="quote-form" novalidate>
+    <h2 id="quote">Printing quote</h2>
+    <p class="form-note" style="margin-top:-6px">For boxes, bags, cups or stickers printed with your logo. We reply with a price and a digital proof.</p>
+    <div class="field" data-required><label for="q-product">What do you want printed?</label><select id="q-product" name="product"></select><span class="err">Pick an item, or choose “Something else”.</span></div>
+    <div class="form-row">
+      <div class="field"><label for="q-size">Size <small>(if not a stock size)</small></label><input id="q-size" name="size" placeholder="e.g. 10 × 8 × 3 in"></div>
+      <div class="field" data-required><label for="q-qty">Quantity</label><input id="q-qty" name="qty" inputmode="numeric" placeholder="e.g. 1000"><span class="err">Roughly how many?</span></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label for="q-col">Print</label><select id="q-col" name="colours"><option>1 colour</option><option>2 colours</option><option>Full colour</option><option>Not sure</option></select></div>
+      <div class="field"><label for="q-art">Artwork ready?</label><select id="q-art" name="artwork"><option>Yes</option><option>Logo only, need help with layout</option><option>No</option></select></div>
+    </div>
+    <div class="field"><label for="q-notes">Anything else <small>(optional)</small></label><textarea id="q-notes" name="notes" placeholder="Deadline, colours, a link to a box you like…"></textarea></div>
+    <div class="form-row">
+      <div class="field" data-required><label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name"><span class="err">Your name, please.</span></div>
+      <div class="field" data-required><label for="q-phone">Phone / WhatsApp</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx"><span class="err">A number with at least 10 digits.</span></div>
+    </div>
+    <div class="field"><label for="q-biz">Business <small>(optional)</small></label><input id="q-biz" name="business" autocomplete="organization"></div>
+    <div class="form-actions"><button class="btn" type="submit">Send request on WhatsApp</button></div>
+    <p class="status" id="quote-status" role="status"></p>
+  </form>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/draw.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

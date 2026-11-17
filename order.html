@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order list — Wisdom Traders</title>
+<meta name="description" content="Review your order list and send it to Wisdom Traders on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231E1B16'/%3E%3Ctext x='16' y='23' font-family='Arial Narrow,Arial' font-weight='700' font-size='18' fill='%23F3EEE4' text-anchor='middle'%3EWT%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="order">
+<header id="site-header"></header>
+<main id="main">
+
+<div class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="index.html">Home</a> / Order list</p>
+  <h1 style="font-size:clamp(44px,6vw,84px)">Order list</h1>
+  <p class="lede">Check quantities, add your details, and send the list on WhatsApp. We'll confirm stock and the delivery charge before you pay anything.</p>
+</div></div>
+<div class="wrap order-layout">
+  <div id="order-table"></div>
+  <form class="form" id="order-form" novalidate hidden>
+    <h2>Your details</h2>
+    <div class="form-row">
+      <div class="field" data-required><label for="o-name">Name</label><input id="o-name" name="name" autocomplete="name"><span class="err">Tell us who the order is for.</span></div>
+      <div class="field"><label for="o-biz">Business <small>(optional)</small></label><input id="o-biz" name="business" autocomplete="organization"></div>
+    </div>
+    <div class="form-row">
+      <div class="field" data-required><label for="o-phone">Phone / WhatsApp</label><input id="o-phone" name="phone" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx"><span class="err">We need a number with at least 10 digits to confirm the order.</span></div>
+      <div class="field" data-required><label for="o-city">City</label><input id="o-city" name="city" autocomplete="address-level2" list="cities"><span class="err">Which city are we delivering to?</span></div>
+    </div>
+    <datalist id="cities"><option>Karachi</option><option>Lahore</option><option>Islamabad</option><option>Rawalpindi</option><option>Faisalabad</option><option>Multan</option><option>Hyderabad</option><option>Peshawar</option><option>Quetta</option><option>Sialkot</option></datalist>
+    <div class="field"><label for="o-addr">Delivery address <small>(can be sent later)</small></label><input id="o-addr" name="address" autocomplete="street-address"></div>
+    <div class="field"><label for="o-notes">Notes <small>(optional)</small></label><textarea id="o-notes" name="notes" placeholder="Delivery timing, colour preference, anything else"></textarea></div>
+    <div class="form-actions">
+      <button class="btn" type="submit">Send order on WhatsApp</button>
+      <button class="btn secondary" type="button" id="copy-order">Copy as text</button>
+    </div>
+    <p class="status" id="order-status" role="status"></p>
+  </form>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/draw.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
